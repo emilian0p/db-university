@@ -36,7 +36,7 @@ WHERE YEAR(`date_of_birth`) <= 1991;
 4
 SELECT * 
 FROM `courses` 
-WHERE `year`= 1 AND `period` = 'I semestre';
+WHERE `year`= 1 AND `period` = 'first semester';
 
 
 
@@ -52,7 +52,7 @@ WHERE HOUR(`hour`) >= 14 AND `date` = '2020-06-20';
 6
 SELECT * 
 FROM `degrees` 
-WHERE `level` = 'magistrale';
+WHERE `level` = 'master';
 
 
 

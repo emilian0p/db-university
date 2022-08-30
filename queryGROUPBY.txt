@@ -1,0 +1,35 @@
+1. Contare quanti iscritti ci sono stati ogni anno;
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edifici;
+3. Calcolare la media dei voti di ogni appello d'esam;
+4. Contare quanti corsi di laurea ci sono per ogni dipartiment;
+
+
+
+1
+SELECT COUNT(*),  YEAR(`date_of_birth`) AS 'DATE'
+FROM `students` 
+GROUP BY DATE;
+
+
+
+
+2
+SELECT COUNT(*), `office_number`  
+FROM `teachers` 
+GROUP BY `office_number`;
+
+
+
+
+3
+SELECT `exam_id` AS 'EXAMS', AVG(`vote`) AS 'Average vote' 
+FROM `exam_student`
+GROUP BY EXAMS;
+
+
+
+
+4
+SELECT COUNT(*), `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
